@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Imovel Guide</title>
+</head>
+<body>
+    <header id="header-menu">
+        <nav class="menu-geral">
+            <p><a href="#"><img src="./img/logo-imovel-guide.webp" class="logo-imovel-guide"></a></p>
+            <div class="menus">
+                <div class="menu-1">
+                    <a href="#">Condomínios</a>
+                    <a href="#">Fórum</a>
+                    <a href="#">Guia</a>
+                    <a href="#">Artigos</a>
+                    <a href="#">Ferramentas</a>
+                </div>
+                <div class="menu-2">
+                    <a href="#">Cotar Imóvel</a>
+                    <a href="#">Planos</a>
+                    <a href="#">Entrar</a>
+                    <a href="#" class="cadastrar">CADASTRE-SE</a>
+                </div>
+            </div>
+        </nav>
+        <span class="material-symbols-outlined" id="burguer" onclick="openSideBar()">
+            menu
+        </span> 
+        <menu id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideBar()">&times;</a>
+            <div class="menu-hamburguer-1">
+                <a href="#">Condomínios</a>
+                <a href="#">Fórum</a>
+                <a href="#">Guia</a>
+                <a href="#">Artigos</a>
+                <a href="#">Ferramentas</a>
+            </div>
+            <!--  -->
+            <div class="menu-hamburguer-1">
+                <a href="#">Cotar Imóvel</a>
+                <a href="#">Planos</a>
+                <a href="#">Entrar</a>
+                <a href="#" class="cadastrar">CADASTRE-SE</a>
+            </div>
+        </menu> 
+    </header>
+    <section id="containers">
+        <div class="container-section">
+            <div class="corretores">
+                <div class="corretor-div">
+                    <div class="elemento-pai">
+                        <img src="./img/corretora.jpg" class="corretores-img imagem-blur">
+                        <img src="./img/corretora.jpg" class="corretores-img imagem-normal">
+                    </div>
+                    <div>
+                        <h2 class="nome-corretor">Nome Corretora</h2>
+                        <p class="pontos">3.000 pontos</p>
+                        <a href="#" class="telefone">ver telefone</a>
+                    </div>
+                </div>
+                <div class="corretor-div">
+                    <div class="elemento-pai">
+                        <img src="./img/corretor.jpg" class="corretores-img imagem-blur">
+                        <img src="./img/corretor.jpg" class="corretores-img imagem-normal">
+                    </div>
+                    <div>
+                        <h2 class="nome-corretor">Nome Corretor</h2>
+                        <p class="pontos">1.250 pontos</p>
+                        <a href="#" class="telefone">ver telefone</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-section">
+            <div class="form-msg">
+                <form>
+                    <h2>Mande uma mensagem:</h2>
+                    <input type="text" class="cpf-input" placeholder="Digite seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onkeyup="mascaraCpf(this)" maxlength="14">
+                    <input type="text" class="telefone-input" placeholder="Digite seu telefone" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" onkeyup="mascaraTelefone(this)" maxlength="14">
+                    <input type="text" class="assunto-input" placeholder="Digite o assunto" style="text-align: left">
+                    <button class="btn-mensagem" type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+        <div class="container-section">
+            <div class="form-regra-3">
+                <form>
+                    <h2>Regra de 3</h2>
+                    <div class="teste">
+                        <div class="campo-input">
+                            <input type="text" class="valor-1">
+                            <span class="ceta"></span>
+                            <input type="text" class="valor-2">
+                        </div>
+                        <div class="campo-input">
+                            <input type="text" class="valor-3">
+                            <span></span>
+                            <input type="text" class="resultado">
+                        </div>
+                    </div>
+                    <button class="btn-calcular" type="submit">Calcular</button>
+                </form>
+            </div>
+        </div>
+        <div class="container-modal">
+            <div class="container-section modal">
+            </div>
+            <button class="btn-modal" id="open-modal">ABRIR IMAGEM NO MODAL</button>
+            <!-- Modal -->
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div class="modal-header">
+                    <p></p>
+                    <button id="close-modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                    <img src="./img/fachada-casa.webp" alt="" class="img-modal">
+                </div>
+            </div>
+            <!-- Modal -->
+        </div>
+        <div class="container-download">
+            <div class="container-section download-image">
+                <span class="btn-imovel">Imovel Guide</span>
+            </div> 
+            <button class="btn-download" id="generate-image">DOWNLOAD</button>
+            <a class="download"></a>
+        </div>
+        <div class="container-zoom">
+            <div class="container-section zoom">
+            </div>
+        </div>
+    </section>
+    <footer class="rodape">
+        <div class="menu-rodape">
+            <div class="menu-footer">
+                <div class="menu-1">
+                    <a href="#">Termos</a>
+                    <a href="#">Contatos</a>
+                    <a href="#">Sobre</a>
+                </div>
+                <div class="menu-2">
+                    <p class="copyright">&#169; Copyright 2022. Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <a href="#"><img src="./img/logo-imovel-guide.webp" class="logo-imovel-guide"></a>
+        </div>
+    </footer>
+    <script src="./js/html2canvas.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

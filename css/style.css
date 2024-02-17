@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+:root {
+    --primary-color: #FE6613;
+    --primary-color-dark: #1B2653;
+    --color-grey: #787878;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.logo-imovel-guide {
+    width: 180px;
+    margin-left: 50px;
+    margin-right: 60px;
+}
+
+.menus {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-geral {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color-dark);
+}
+
+.menu-geral a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.menu-2 {
+    margin-right: 50px;
+}
+
+.menu-2 .cadastrar {
+    border: 1px solid #fff;
+    padding: 8px 30px 8px;
+    border-radius: 30px;
+    margin-left: 50px;
+}
+
+/* Menu Hamburguer */
+#burguer {
+    background-color: var(--primary-color-dark);
+    display: none;
+    color: white;
+    text-align: right;
+    font-size: 2em;
+    padding: 30px;
+    cursor: pointer; 
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color-dark);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #9b9b9b;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/*  */
+
+#containers {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 550px 550px 550px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.container-section {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    padding: 10px;
+    height: 500px;
+    border: 2px solid var(--color-grey);
+    border-radius: 10px;
+}
+
+.corretor-div {
+    display: flex;
+    align-items: center;
+}
+
+.corretor-div .nome-corretor {
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color-dark);
+    font-size: 1.5em;
+}
+
+.corretor-div .pontos {
+    padding: 0;
+    margin-top: 5px;
+    color: var(--primary-color-dark);
+    margin-bottom: 5px;
+}
+
+.corretor-div .telefone {
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.corretores-img {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.elemento-pai {
+    position: relative;
+}
+
+.imagem-blur {
+    width: 220px;
+    height: 230px;
+    filter: blur(2px);
+    border: 1px solid var(--color-grey);
+    border-radius: 10px;
+}
+
+.imagem-normal {
+    position: absolute;
+    height: 228px;
+    left: 25px;
+    width: 170px;
+}
+
+.form-msg {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.form-msg h2{
+    margin: 0 0 40px;
+    color: var(--primary-color-dark);
+    font-size: 2em;
+    border-radius: 10px;
+}
+
+.form-msg input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    border: 2px solid var(--color-grey);
+}
+
+.form-msg input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-msg .assunto-input {
+    text-align: start;
+    padding-bottom: 150px;
+    border-radius: 10px;
+}
+
+.form-msg .btn-mensagem, .form-regra-3 .btn-calcular, .btn-modal,  .btn-download {
+    width: 180px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    color: #FFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.form-regra-3 {
+    width: 95%;
+    margin: 20px auto;
+}
+
+.form-regra-3 h2 {
+    margin: 0 0 40px;
+    color: var(--primary-color-dark);
+    font-size: 2em;
+    border-radius: 10px;
+}
+
+.form-regra-3 .valor-1, .valor-2, .valor-3, .resultado {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    border: 2px solid var(--color-grey);
+}
+
+.resultado {
+    border: 2px solid var(--primary-color);
+}
+
+.campo-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.campo-input span {
+    margin: 10px;
+    width: 150px;
+    height: 2px;
+    background-color: black;
+}
+
+.teste {
+    margin-top: 130px;
+    margin-bottom: 140px;
+}
+
+.container-modal, .container-download, .container-zoom {
+    margin: 30px;
+}
+
+.container-zoom {
+    cursor: pointer;
+}
+
+.modal, .download-image {
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-image: url('../img/fachada-casa.webp');
+    background-size: 140%;
+    background-position: center;
+    margin: 15px auto;
+}
+
+#fade, #modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.btn-modal {
+    width: 100%;
+    padding: 12px;
+}
+
+#close-modal {
+    font-size: 2em;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal  */
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+ }
+ 
+ #modal {
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     background-color: #fff;
+     z-index: 10;
+     width: 70%;
+     max-width: 90%;
+     padding: 1.2rem;
+     border-radius: .5rem;
+ }
+ 
+ .modal-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 1px solid var(--color-grey);
+     margin-bottom: 1rem;
+     padding-bottom: 1rem;
+ }
+ 
+ .modal-body p {
+     margin-bottom: 1rem;
+ }
+ 
+ #modal.hide,
+ #fade.hide {
+     opacity: 0;
+     pointer-events: none;
+ }
+ 
+ #modal.hide {
+     top: 0;
+ }
+
+ .img-modal {
+    display: flex;
+    margin: 15px auto;
+    width: 800px;
+    max-width: 90%;
+    height: 700px;
+    border-radius: 8px;
+ }
+
+/* Modal  */
+
+.btn-imovel {
+    margin-top: 400px;
+    opacity: 0.9;
+    padding: 12px;
+    text-align: center;
+    width: 80%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 12px;
+    color: #FFFF;
+}
+
+.btn-download {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+}
+
+.container-zoom .zoom {
+    display: flex;
+    background-image: url('../img/fachada-casa.webp');
+    background-position: center;
+    background-size: 140%;
+    margin: 15px auto;
+    animation: zoomIn 5s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        background-size: 160%;
+    }
+    to {
+        background-size: 140%;
+    }
+}
+
+.rodape {
+    width: 100%;
+    background-color: #1B2653;
+}
+
+.menu-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-dark);
+}
+
+.menu-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-rodape a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.menu-rodape .menu-1 {
+    margin-left: 80px;
+}
+
+.copyright {
+    color: #fff;
+}
+
+@media (max-width: 1623px) {
+    #containers {
+        display: grid;
+        grid-template-columns: 450px 450px 450px;
+    }
+
+    .logo-imovel-guide {
+        width: 180px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .img-modal {
+        height: 600px;
+    }
+}
+
+@media (max-width: 1316px) {
+    #containers {
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+    }
+
+    .logo-imovel-guide {
+        width: 150px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .img-modal {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1159px) { 
+    nav .menus {
+        display: none;
+    }
+    
+    .logo-imovel-guide {
+        width: 150px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #burguer {
+        margin: 0;
+        display: block;
+    }
+    
+    #burguer:hover + #itens,
+    #itens:hover {
+        display: block;
+    }
+
+    #header-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .sidenav .menu-hamburguer-1 {
+        margin-bottom: 40px;
+    }
+
+    .sidenav a {
+        font-size: 1em;
+    }
+
+    .sidenav a:hover {
+        color: #3F70C7;
+    }
+
+    .sidenav .cadastrar {
+        width: 80%;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        font-size: 1em;
+        background-color: #415977;
+    }
+
+    .sidenav .cadastrar:hover {
+        background-color: #3F70C7;
+        color: #fff;
+    }
+
+    #containers {
+        display: grid;
+        grid-template-columns: 480px 480px;
+    }
+
+    .modal {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    .img-modal {
+        height: 350px;
+    }
+
+    .menu-footer .menu-1 {
+        display: none;
+    }
+
+    .rodape {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .copyright {
+        color: #fff;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 923px) { 
+    nav .menus {
+        display: none;
+    }
+
+    .logo-imovel-guide {
+        width: 120px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #burguer {
+        margin: 0;
+        display: block;
+    }
+    #burguer:hover + #itens,
+    #itens:hover {
+        display: block;
+    }
+
+    #header-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-geral a {
+        margin: 0;
+        font-size: 0.5em;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+    }
+
+    .sidenav .menu-hamburguer-1 {
+        margin-bottom: 40px;
+    }
+
+    .sidenav a {
+        font-size: 1em;
+    }
+
+    .sidenav a:hover {
+        color: #3F70C7;
+    }
+
+    .sidenav .cadastrar {
+        width: 80%;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        font-size: 1em;
+        background-color: #415977;
+    }
+
+    .sidenav .cadastrar:hover {
+        background-color: #3F70C7;
+        color: #fff;
+    }
+
+    #containers {
+        display: block;
+    }
+
+
+
+    .imagem-blur {
+        width: 190px;
+        height: 220px;
+    }
+    
+    .imagem-normal {
+        position: absolute;
+        width: 150px;
+        height: 220px;
+        left: 20px;
+    }
+
+    #modal {
+        width: 90%;
+    }
+
+    .img-modal {
+        height: 350px;
+    }
+
+    .menu-footer .menu-1 {
+        display: none;
+    }
+
+    .menu-2 {
+        margin-right: 0
+    }
+
+    .rodape {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .copyright {
+        color: #fff;
+        font-size: 0.8em;
+    }
+}
