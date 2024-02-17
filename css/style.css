@@ -620,8 +620,6 @@ body {
         display: block;
     }
 
-
-
     .imagem-blur {
         width: 190px;
         height: 220px;
@@ -632,6 +630,10 @@ body {
         width: 150px;
         height: 220px;
         left: 20px;
+    }
+
+    .btn-mensagem {
+        margin-bottom: 10px;
     }
 
     #modal {

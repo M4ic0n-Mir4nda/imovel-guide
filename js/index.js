@@ -122,6 +122,12 @@ btnCalcularRegradeTres.addEventListener('click', (event) => {
     const valor3 = document.querySelector('.valor-3');
     const resultadoInput = document.querySelector('.resultado');
 
+    if (valor1.value === '' || isNaN(valor1.value) || valor2.value === '' || isNaN(valor2.value) || valor3.value === '' || isNaN(valor3.value)) {
+        alert('Preencha os campos corretamente!')
+        event.preventDefault();
+        return;
+    }
+
     const total = calculoRegraDeTres(valor1, valor2, valor3)
 
     resultadoInput.value = total
