@@ -458,6 +458,7 @@ body {
 
     .img-modal {
         height: 600px;
+        width: 600px;
     }
 }
 
@@ -468,13 +469,14 @@ body {
     }
 
     .logo-imovel-guide {
-        width: 150px;
+        width: 180px;
         margin-left: 0;
         margin-right: 0;
     }
 
     .img-modal {
         height: 500px;
+        width: 500px;
     }
 }
 
