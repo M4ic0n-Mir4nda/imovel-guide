@@ -52,6 +52,15 @@ body {
     padding: 8px 30px 8px;
     border-radius: 30px;
     margin-left: 50px;
+    transition: 0.2s;
+}
+
+.menu-geral .link:hover {
+    opacity: 0.8;
+}
+
+.cadastrar:hover {
+    background-color: #3F70C7;
 }
 
 /* Menu Hamburguer */
@@ -220,6 +229,10 @@ body {
     font-weight: 500;
 }
 
+.btn-calcular:hover, .btn-modal:hover, .btn-mensagem:hover, .btn-download:hover {
+    opacity: 0.9;
+}
+
 .form-regra-3 {
     width: 95%;
     margin: 20px auto;
@@ -260,17 +273,13 @@ body {
     background-color: black;
 }
 
-.teste {
+.container-inputs{
     margin-top: 130px;
     margin-bottom: 140px;
 }
 
 .container-modal, .container-download, .container-zoom {
     margin: 30px;
-}
-
-.container-zoom {
-    cursor: pointer;
 }
 
 .modal, .download-image {
@@ -637,7 +646,7 @@ body {
     }
 
     .btn-mensagem {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     #modal {

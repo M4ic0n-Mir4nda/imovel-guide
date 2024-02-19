@@ -1,4 +1,4 @@
-// Inputs
+// Btn Inputs
 const btnEnviarMensagem = document.querySelector('.btn-mensagem');
 const btnCalcularRegradeTres = document.querySelector('.btn-calcular');
 const inputTelefone = document.querySelector('.telefone');
@@ -12,7 +12,7 @@ const fade = document.querySelector('#fade');
 
 const toggleModal = () => {
     modal.classList.toggle('hide');
-    fade.classList.toggle('hide')
+    fade.classList.toggle('hide');
 }
 
 [openModalBtn, closenModalBtn, fade].forEach((el) => {
@@ -33,16 +33,16 @@ btnGenerateImage.addEventListener('click', () =>  {
 });
 //
 
-// Menu Hamburguer
+// Open menu Hamburguer
 function openSideBar() {
     document.getElementById("mySidenav").style.width = "250px";
 }
-  
+
+// Close menu Hamburguer
 function closeSideBar() {
 document.getElementById("mySidenav").style.width = "0";
 }
 //
-
 
 function mascaraCpf(input) {
         let clean = input.value.replace(/\D/g, '');
@@ -108,7 +108,7 @@ btnEnviarMensagem.addEventListener('click', (event) => {
     const assunto = document.querySelector('.assunto-input');
 
     if (cpf.value.length !== 14 || telefone.value.length !== 14 || assunto.value === '') {
-        event.preventDefault()
+        event.preventDefault();
         alert('Preencha todos os dados!');
         return;
     }
@@ -128,9 +128,9 @@ btnCalcularRegradeTres.addEventListener('click', (event) => {
         return;
     }
 
-    const total = calculoRegraDeTres(valor1, valor2, valor3)
+    const total = calculoRegraDeTres(valor1, valor2, valor3);
 
-    resultadoInput.value = total
+    resultadoInput.value = total;
 
     valor1.value = '';
     valor2.value = '';
